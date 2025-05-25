@@ -152,4 +152,101 @@ public class viajeInterestelar {
 
     return destinationPlanetInfo;
   }
+
+  // Calcula la duracion del viaje en dias al recibir la distancia del planeta
+  // destino seleccionado y la velocidad de la nave seleccionada y retorna el
+  // resultado.
+  private static double calTravelDuration(String planetDistance, String spaceShipMaxVel) {
+
+    var tempPlanetDistance = Double.parseDouble(planetDistance);
+    var tempSpaceShipMaxVel = Double.parseDouble(spaceShipMaxVel);
+    var travelDuration = 0d;
+
+    tempPlanetDistance = tempPlanetDistance * 1000000;
+    tempSpaceShipMaxVel = tempSpaceShipMaxVel * 24;
+
+    travelDuration = tempPlanetDistance / tempSpaceShipMaxVel;
+
+    return travelDuration;
+  }
+
+  private static void calTravelProgress(String[] destinationPlanet, String[] selectedSpaceShip,
+      double travelDuration) {
+
+    var spaceShipVel = Double.parseDouble(selectedSpaceShip[1]);
+    var destinationPlanetDistance = Double.parseDouble(destinationPlanet[1]) * 1000000;
+    var currentDistance = spaceShipVel * 24;
+
+    var percentage = (currentDistance / destinationPlanetDistance) * 100;
+    var temp = 0d;
+    var days = 0;
+    var fix = "=";
+    fix = fix.repeat(60);
+
+    System.out.printf(
+        "%1$s%4$s%n"
+            + "Starting the travel from Earth to %2$s.%3$s%n",
+        GREEN, destinationPlanet[0], RESET, fix);
+
+    while (days <= travelDuration) {
+      System.out.printf("%1$sEstimated travel duration: %2$,.0f Dias.%5$s(%3$.2f%%)%4$s\r",
+          BLUE, travelDuration - days, temp, generateEvent(), RESET);
+
+      if (days == (int) (travelDuration / 2)) {
+        System.out.printf("Halfway through the route: %2$,.0f Dias.%4$s(%3$d%%)       %n",
+            BLUE, travelDuration - travelDuration / 2, 50, RESET);
+      }
+
+      try {
+        Thread.sleep(200);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+
+      temp = temp + percentage;
+      days = days + 1;
+
+      System.out.printf("                                                            \r");
+    }
+    System.out.printf("%1$sEstimated travel duration: %2$.0f Dias.%4$s(%3$d%%): Travel Completed.%n",
+        BLUE, travelDuration - travelDuration, 100, RESET);
+    System.out.printf(
+        "%1$s====================== Final Report ======================%2$s%n- Destination Planet: %3$s%n"
+            + "- Spaceship: %4$s%n- N° Passengers: %5$s%n- Total distance traveled: %6$,.0f%n"
+            + "- Average travel velocity: %7$,.0f%n- Travel duration: %8$,.0f%n"
+            + "%1$s%9$s%2$s%n%10$sPlease press enter to continue.%2$s",
+        GREEN, RESET, destinationPlanet[0], selectedSpaceShip[0], selectedSpaceShip[3],
+        destinationPlanetDistance, spaceShipVel, travelDuration, fix, BLUE);
+    input.nextLine();
+
+  }
+
+  private static String generateEvent() {
+    Random random = new Random();
+    double probability = random.nextDouble();
+    String[] randomEvent = {
+        "Successful navigation",
+        "System failure",
+        "Encounter with an asteroid",
+        "Sighting of a new star",
+        "Fuel leak",
+        "Scheduled maintenance",
+        "Communication with another spacecraft",
+        "Space-time anomaly"
+    };
+    double[] probabilitys = {
+        0.05, // 5%
+    };
+    int index = 0;
+    String event = "";
+
+    if (probability < probabilitys[0]) {
+      index = random.nextInt(randomEvent.length);
+      event = String.format(": %1$s%n", randomEvent[index]);
+
+      return event;
+    } else {
+      return event;
+    }
+  }
 }
