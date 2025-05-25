@@ -17,25 +17,25 @@ Este programa Java básico se encarga de:
 
 2. **Gestión de la Nave Espacial.**
 
-- [ ] **Seleccionar una nave para el viaje:** El sistema ofrecerá al usuario una lista
+- [x] **Seleccionar una nave para el viaje:** El sistema ofrecerá al usuario una lista
       de naves espaciales, cada una con características básicas, como la velocidad
       máxima y la capacidad de pasajeros.
 
-- [ ] **Ingresar la cantidad de pasajeros:** El usuario deberá especificar la cantidad
+- [x] **Ingresar la cantidad de pasajeros:** El usuario deberá especificar la cantidad
       de pasajeros que viajarán. El sistema solo verificará que se ingrese un valor
       positivo, pero no limitará la cantidad máxima.
 
-- [ ] **Cálculo de la duración del viaje:** Basado en la velocidad de la nave y la
+- [x] **Cálculo de la duración del viaje:** Basado en la velocidad de la nave y la
       distancia al planeta seleccionado, el sistema calculará la duración estimada
       del viaje en días.
 
 3. **Simulación del Viaje.**
 
-- [ ] **Simulación básica del progreso del viaje:** El sistema mostrará el avance del
+- [x] **Simulación básica del progreso del viaje:** El sistema mostrará el avance del
       viaje mediante una serie de mensajes en la consola, indicando el porcentaje
       completado del trayecto.
 
-- [ ] **Uso de estructuras de control para simular el viaje:** El progreso se
+- [x] **Uso de estructuras de control para simular el viaje:** El progreso se
       calculará utilizando bucles básicos (por ejemplo, un bucle for para
       incrementar el progreso en intervalos regulares), y se presentarán
       mensajes condicionales (usando if y switch) para indicar etapas clave del
@@ -43,7 +43,7 @@ Este programa Java básico se encarga de:
 
 4. **Interacción con el Usuario.**
 
-- [ ] **Menú de opciones:** El sistema debe proporcionar un menú interactivo en
+- [x] **Menú de opciones:** El sistema debe proporcionar un menú interactivo en
       consola que permita al usuario elegir entre las siguientes opciones: 
       
       - Seleccionar un planeta de destino. 
@@ -51,29 +51,29 @@ Este programa Java básico se encarga de:
       - Iniciar la simulación del viaje. 
       - Salir del programa.
 
-- [ ] **Validación de opciones:** El sistema debe verificar que el usuario elija una
+- [x] **Validación de opciones:** El sistema debe verificar que el usuario elija una
       opción válida en el menú. Si el usuario ingresa una opción no válida, se
       mostrará un mensaje y se volverá a presentar el menú.
 
 5. **Manipulación de Datos.**
 
-- [ ] **Uso de variables y tipos de datos:** Los datos como la distancia al planeta, la
+- [x] **Uso de variables y tipos de datos:** Los datos como la distancia al planeta, la
       velocidad de la nave, y la cantidad de pasajeros se manejarán utilizando
       tipos de datos básicos como int, double, y String.
 
-- [ ] **Almacenamiento de planetas y naves en arrays:** Los planetas y las naves
+- [x] **Almacenamiento de planetas y naves en arrays:** Los planetas y las naves
       espaciales se almacenarán en arrays para facilitar su selección e
       información. Por ejemplo, un array de strings para los nombres de los
       planetas y otro array para las distancias correspondientes.
 
 6. **Modularidad y Métodos.**
 
-- [ ] **Descomposición del programa en métodos:** El sistema debe utilizar
+- [x] **Descomposición del programa en métodos:** El sistema debe utilizar
       métodos para separar la lógica de selección del planeta, cálculo de la
       duración del viaje, y simulación del trayecto. Cada funcionalidad principal
       se implementará en un método separado.
 
-- [ ] **Uso de parámetros y retorno de valores:** Los métodos aceptarán
+- [x] **Uso de parámetros y retorno de valores:** Los métodos aceptarán
       parámetros para recibir datos del usuario (por ejemplo, la distancia y
       velocidad) y retornarán resultados como la duración del viaje.
 
