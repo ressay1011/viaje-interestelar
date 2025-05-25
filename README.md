@@ -6,12 +6,12 @@ Este programa Java básico se encarga de:
 
 1. **Selección de Planeta de Destino.**
 
-- [ ] **Elegir un planeta para el viaje:** El sistema debe permitir al usuario
+- [x] **Elegir un planeta para el viaje:** El sistema debe permitir al usuario
       seleccionar un planeta de destino para su viaje interplanetario. Los planetas
       disponibles serán Marte, Júpiter, y Saturno, cada uno con diferentes
       distancias desde la Tierra.
 
-- [ ] **Mostrar detalles del planeta:** Una vez seleccionado el planeta, el sistema
+- [x] **Mostrar detalles del planeta:** Una vez seleccionado el planeta, el sistema
       debe mostrar información básica, como la distancia en millones de
       kilómetros y una breve descripción.
 
